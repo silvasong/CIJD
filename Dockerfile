@@ -23,7 +23,7 @@ ENV PATH=$MAVEN_HOME/bin:$PATH
 
 
 RUN mkdir /var/tmp/webapp
-ADD /var/lib/jenkins/workspace/CIJD /var/tmp/webapp
+ADD ../CIJD /var/tmp/webapp
 RUN cd /var/tmp/webapp && mvn package && cp /var/tmp/webapp/target/CIJD.war /var/tmp/tomcat/apache-tomcat-8.0.33/webapps
 
 EXPOSE 8080
