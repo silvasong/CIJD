@@ -3,6 +3,7 @@ MAINTAINER Silva Song "silva.song@aliyun.com"
 
 #安装JDK
 RUN apt-get update
+RUN apt-get upgrade
 RUN apt-get install -y openjdk-7-jdk && apt-get install -y wget
 
 #安装tomcat
